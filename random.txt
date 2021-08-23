@@ -1,2 +1,0 @@
-
-wag eywga /usr/local/bin/python3 /Users/bhargavavetsa/Documents/python/txtimport.py
