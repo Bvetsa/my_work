@@ -4,6 +4,8 @@ string_len = []
 
 sort_string = []
 
+string.sort()
+ 
 for x in string:
     string_len.append(len(x))
 
