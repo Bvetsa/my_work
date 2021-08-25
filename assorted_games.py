@@ -57,9 +57,3 @@ def num_guess():
                     print("You lost. The number is " + str(num))
 
 num_guess()
-
-
-
-x = range(3,6)
-for n in x:
-    print(n)
