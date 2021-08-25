@@ -15,7 +15,7 @@ def rock_paper_scissors():
         time.sleep(0.5)
         print(random.choice(choices))
 
-#rock_paper_scissors()
+rock_paper_scissors()
 
 def num_guess():
     import time
