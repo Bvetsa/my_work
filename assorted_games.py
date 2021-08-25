@@ -32,30 +32,30 @@ def num_guess():
         print("I have my number.")
         time.sleep(0.5)
         print("You have 5 guesses.")
-        guess_1 = int(input("What is your first guess? "))
-        if guess_1 == num:
-            print("You got it correct! the number was " + str(num))
-        else:
-            guess_2 = int(input("What is your second guess? "))
-            if guess_2 == num:
-                print("You got it correct! the number was " + str(num))
+        for x in range(1,5):
+            if x == 1:
+                y = "st"
+            elif x == 2:
+                y = "nd"
+            elif x == 3:
+                y = "rd"
             else:
-                guess_3 = int(input("What is your third guess? "))
-                if guess_3 == num:
+                y = "th"
+            i = int(input("What is your " + str(x) + str(y) + " guess? "))
+            if i == num:
+                print("You got it correct! the number was " + str(num))
+                break
+            elif x == 4:
+                n = num - i
+                if n < 0:
+                    n*=-1
+                guess_5 = int(input("This is your 5th guess so I will give you a clue. Your last guess was " + str(n) +  " away from the correct answer. What is your fifth guess? "))
+                if guess_5 == num:
                     print("You got it correct! the number was " + str(num))
                 else:
-                    guess_4 = int(input("What is your fourth guess? "))
-                    if guess_4 == num:
-                        print("You got it correct! the number was " + str(num))
-                    else:
-                        n = num - guess_4
-                        if n < 0:
-                            n*=-1
-                        guess_5 = int(input("This is your fifth guess so I will give you a clue. Your last guess was " + str(n) +  " away from the correct answer. What is your fifth guess? "))
-                        if guess_5 == num:
-                            print("You got it correct! the number was " + str(num))
-                        else:
-                            if guess_1 != num and guess_2 != num and guess_3 != num and guess_4 != num and guess_5 != num:
-                                print("You lost. The number is " + str(num))
+                    print("You lost. The number is " + str(num))
 
 num_guess()
+
+
+
