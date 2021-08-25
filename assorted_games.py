@@ -15,7 +15,7 @@ def rock_paper_scissors():
         time.sleep(0.5)
         print(random.choice(choices))
 
-rock_paper_scissors()
+#rock_paper_scissors()
 
 def num_guess():
     import time
@@ -48,7 +48,10 @@ def num_guess():
                     if guess_4 == num:
                         print("You got it correct! the number was " + str(num))
                     else:
-                        guess_5 = int(input("What is your fifth guess? "))
+                        n = num - guess_4
+                        if n < 0:
+                            n*=-1
+                        guess_5 = int(input("This is your fifth guess so I will give you a clue. Your last guess was " + str(n) +  " away from the correct answer. What is your fifth guess? "))
                         if guess_5 == num:
                             print("You got it correct! the number was " + str(num))
                         else:
