@@ -24,8 +24,9 @@ def num_guess():
     print("Lets play Number Guesser!")
     play = input("Are you ready to play?(y/n) ")
     if play == "y" or play == "Y":
-        x = int(input("What would you like to be the range of this number guesser? "))
-        for i in range(1, x + 1):
+        y = int(input("What would you like to be the min of this number guesser? "))
+        x = int(input("What would you like to be the max of this number guesser? "))
+        for i in range(y+1, x + 1):
             array.append(i)
         num = random.choice(array)
         time.sleep(1)
