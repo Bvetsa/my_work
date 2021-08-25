@@ -15,7 +15,7 @@ def rock_paper_scissors():
         time.sleep(0.5)
         print(random.choice(choices))
 
-rock_paper_scissors()
+#rock_paper_scissors()
 
 def num_guess():
     import time
@@ -26,7 +26,7 @@ def num_guess():
     if play == "y" or play == "Y":
         y = int(input("What would you like to be the min of this number guesser? "))
         x = int(input("What would you like to be the max of this number guesser? "))
-        for i in range(y+1, x + 1):
+        for i in range(y, x + 1):
             array.append(i)
         num = random.choice(array)
         time.sleep(1)
@@ -58,5 +58,10 @@ def num_guess():
 
 num_guess()
 
+
+
+x = range(3,6)
+for n in x:
+    print(n)
 
 
